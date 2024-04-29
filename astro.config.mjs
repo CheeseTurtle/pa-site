@@ -14,7 +14,7 @@ import vercel from '@astrojs/vercel/serverless'
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://cheeseturtle.github.io',
-	base: 'pa-site',
+	base: '/pa-site/',
 	integrations: [
 		expressiveCode(expressiveCodeOptions),
 		tailwind({
