@@ -12,10 +12,39 @@ import astro from '../assets/about-astro.png'
 
 import { getAllPosts, sortMDByDate } from '@/utils'
 
-const languages = ['lorem', 'ipsum']
-const frontend = ['lorem', 'ipsum', 'lorem', 'ipsum', 'lorem', 'ipsum', 'lorem']
-const backend = ['lorem', 'ipsum', 'lorem', 'ipsum']
-const others = ['lorem', 'ipsum', 'lorem', 'ipsum', 'lorem']
+const native = ['C#', 'Python', 'PowerShell']
+const fluent = [
+	'C',
+	'C++',
+	'Java',
+	'SWI-Prolog',
+	'MATLAB',
+	'VBA',
+	'Javascript',
+	'CSS',
+	'HTML',
+	'TeX'
+]
+const conversational = ['Lua', 'Bash', 'Typescript', 'ASM']
+const aiinterests = [
+	'deep learning',
+	'NN architecture',
+	'GNN',
+	'RNN',
+	'bi-GRU',
+	'NLP',
+	'NLU',
+	'ASR'
+]
+const bioinf = [
+	'prion diseases',
+	'pharmacoperones',
+	'computer-aided design',
+	'rational protein design',
+	'folding trajectory',
+	'PPI inference'
+]
+const hobbies = ['GNU Emacs', 'Helix (editor)', 'FoldIt']
 
 const MAX_POSTS = 10
 const allPosts = await getAllPosts()
@@ -33,7 +62,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 			/>
 
 			<div class='flex flex-col items-center gap-y-4'>
-				<h1 class='text-3xl font-bold'>Lorem ipsum dolor</h1>
+				<h1 class='text-3xl font-bold'>Parallel Algorithms Coursework Collection</h1>
 				<a
 					href='https://github.com/srleom/astro-theme-resume.git'
 					class='flex flex-row items-center gap-x-3 rounded-3xl border border-input px-4 py-2 text-sm shadow-sm transition-all hover:shadow-md'
@@ -48,7 +77,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 					<p class='font-medium'>Get free template</p>
 				</a>
 				<div class='flex flex-wrap justify-center gap-x-7 gap-y-3'>
-					<Label title='Lorem Ipsum'>
+					<Label title='🐢'>
 						<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' class='h-5 w-5' slot='icon'
 							><path
 								fill='currentColor'
@@ -56,7 +85,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 							></path></svg
 						>
 					</Label>
-					<Label title='Ipsum'>
+					<Label title='🏠'>
 						<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' class='h-5 w-5' slot='icon'
 							><path
 								fill='currentColor'
@@ -67,7 +96,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 					<Label
 						title='Connect on Linkedin'
 						as='a'
-						href='https://www.linkedin.com/in/example/'
+						href='https://www.linkedin.com/in/stanley-soo-41002b1a8'
 						target='_blank'
 					>
 						<svg
@@ -87,10 +116,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 
 		<Section title='About'>
 			<p class='text-muted-foreground'>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis atque quia omnis
-				consectetur, voluptas praesentium veniam blanditiis ratione asperiores accusantium laborum
-				odit commodi quis deserunt incidunt et dolor iure ut! Lorem ipsum dolor sit, amet
-				consectetur adipisicing elit. Alias quia, doloribus ut beatae perspiciatis voluptatibus.
+				This is a collection of some of the work I completed for the Parallel Algorithms course.
 			</p>
 		</Section>
 		{
@@ -207,11 +233,16 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 			/>
 		</Section>
 
-		<Section title='Skills'>
-			<SkillLayout title='Languages' skills={languages} />
-			<SkillLayout title='Frontend' skills={frontend} />
-			<SkillLayout title='Backend' skills={backend} />
-			<SkillLayout title='Others' skills={others} />
+		<Section title='Languages'>
+			<SkillLayout title='Native' skills={native} />
+			<SkillLayout title='Fluent' skills={fluent} />
+			<SkillLayout title='Conversational' skills={conversational} />
+		</Section>
+
+		<Section title='Interests'>
+			<SkillLayout title='Artificial Intelligence' skills={aiinterests} />
+			<SkillLayout title='Bioinformatics' skills={bioinf} />
+			<SkillLayout title='Just For Fun' skills={hobbies} />
 		</Section>
 	</div>
 	<a
